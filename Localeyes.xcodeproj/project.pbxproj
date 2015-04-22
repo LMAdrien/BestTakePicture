@@ -14,6 +14,11 @@
 		F7D038BC1AE6A186007B779D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D038BB1AE6A186007B779D /* Images.xcassets */; };
 		F7D038BF1AE6A186007B779D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D038BD1AE6A186007B779D /* LaunchScreen.xib */; };
 		F7D038CB1AE6A186007B779D /* LocaleyesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038CA1AE6A186007B779D /* LocaleyesTests.m */; };
+		F7D038D51AE6A3B9007B779D /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D038D41AE6A3B9007B779D /* Photos.framework */; };
+		F7D038D71AE6A3BF007B779D /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D038D61AE6A3BF007B779D /* PhotosUI.framework */; };
+		F7D038D91AE6A42C007B779D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D038D81AE6A42C007B779D /* AVFoundation.framework */; };
+		F7D038DB1AE6A437007B779D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D038DA1AE6A437007B779D /* AVKit.framework */; };
+		F7D038DE1AE6A5D7007B779D /* TakePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038DD1AE6A5D7007B779D /* TakePhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,12 @@
 		F7D038C41AE6A186007B779D /* LocaleyesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocaleyesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D038C91AE6A186007B779D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7D038CA1AE6A186007B779D /* LocaleyesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocaleyesTests.m; sourceTree = "<group>"; };
+		F7D038D41AE6A3B9007B779D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		F7D038D61AE6A3BF007B779D /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		F7D038D81AE6A42C007B779D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F7D038DA1AE6A437007B779D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		F7D038DC1AE6A5D7007B779D /* TakePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhoto.h; sourceTree = "<group>"; };
+		F7D038DD1AE6A5D7007B779D /* TakePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D038D71AE6A3BF007B779D /* PhotosUI.framework in Frameworks */,
+				F7D038DB1AE6A437007B779D /* AVKit.framework in Frameworks */,
+				F7D038D91AE6A42C007B779D /* AVFoundation.framework in Frameworks */,
+				F7D038D51AE6A3B9007B779D /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,12 @@
 		F7D038A21AE6A186007B779D = {
 			isa = PBXGroup;
 			children = (
+				F7D038DC1AE6A5D7007B779D /* TakePhoto.h */,
+				F7D038DD1AE6A5D7007B779D /* TakePhoto.m */,
+				F7D038DA1AE6A437007B779D /* AVKit.framework */,
+				F7D038D81AE6A42C007B779D /* AVFoundation.framework */,
+				F7D038D61AE6A3BF007B779D /* PhotosUI.framework */,
+				F7D038D41AE6A3B9007B779D /* Photos.framework */,
 				F7D038AD1AE6A186007B779D /* Localeyes */,
 				F7D038C71AE6A186007B779D /* LocaleyesTests */,
 				F7D038AC1AE6A186007B779D /* Products */,
@@ -220,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7D038B71AE6A186007B779D /* ViewController.m in Sources */,
+				F7D038DE1AE6A5D7007B779D /* TakePhoto.m in Sources */,
 				F7D038B41AE6A186007B779D /* AppDelegate.m in Sources */,
 				F7D038B11AE6A186007B779D /* main.m in Sources */,
 			);
@@ -350,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Localeyes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Localeyes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +442,7 @@
 				F7D038D01AE6A186007B779D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7D038D11AE6A186007B779D /* Build configuration list for PBXNativeTarget "LocaleyesTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +451,7 @@
 				F7D038D31AE6A186007B779D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
