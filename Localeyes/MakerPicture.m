@@ -14,4 +14,6 @@
 @implementation MakerPicture
 @synthesize departmentStore;
 
+
+
 @end
