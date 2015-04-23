@@ -22,8 +22,8 @@ static BOOL ERRORNSLOG = true;
 @property(nonatomic, retain) MakerPicture *makerPicture;
 @property (weak, nonatomic) IBOutlet UILabel *NumberShoot;
 
-- (IBAction)ActionShot:(id)sender;
-
+- (IBAction)ActionSelect:(UIButton *)sender;
+- (IBAction)ActionShot:(UIButton *)sender;
 - (IBAction)ActionNextColumn:(id)sender;
 @end
 

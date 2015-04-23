@@ -12,7 +12,7 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 
 
@@ -37,6 +37,7 @@
     NSInteger NbElementsArray = _ProspectImage.count;
     _ViewCamera.image = _ViewPicture.image;
    [_ProspectImage insertObject:_ViewPicture.image atIndex:NbElementsArray];
+    [self takePhoto];
     [_NumberShoot setText:[NSString stringWithFormat: @"%li",_ProspectImage.count]];
     if(ERRORNSLOG == true)
     {
@@ -45,10 +46,55 @@
         }
     }
 }
-
 //  Action button to next column in department store
-
 - (IBAction)ActionNextColumn:(id)sender {
+    [self takePhoto];
+}
+
+
+/*
+ * TESTING BEGIN
+ */
+- (IBAction)selectPhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+-(void)takePhoto{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerCameraCaptureModePhoto;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+-(void)getCamera{
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    picker.showsCameraControls = YES;
+    picker.navigationBarHidden = NO;
+    picker.toolbarHidden = YES;
+    [picker takePicture];
+    
+    // Insert the overlay
+    //self.overlay = [[o alloc] initWithNibName:@"Overlay" bundle:nil];
+    //overlay.pickerReference = picker;
+    //picker.cameraOverlayView = overlay.view;
+    //picker.delegate = overlay;
+    
+    [self presentModalViewController:picker animated:YES];
     
 }
+/*
+ * TESTING END
+ */
 @end

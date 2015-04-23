@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MakerPicture : UIImage
-
+-(id)init;
 @property (nonatomic, retain) NSMutableArray *departmentStore;
 
 @end
