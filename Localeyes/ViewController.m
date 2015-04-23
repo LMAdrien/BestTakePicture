@@ -21,18 +21,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //_image = [[UIImage alloc]init];
-    //_outImage = [[UIImage alloc] init];
-    //_ProspectImage = [[NSMutableArray alloc] init];
-    //_image = [UIImage imageNamed:@"etna"];
-    //_ViewPicture.image = _image;
+    _outImage = [[UIImage alloc] init];
+    _ProspectImage = [[NSMutableArray alloc] init];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     }
 
-//  Action button shot camera
+//  Action button shot camera => to Refactoring
 /*
 - (IBAction)ActionShot:(id)sender {
     NSInteger NbElementsArray = _ProspectImage.count;
@@ -52,9 +50,7 @@
 }
 */
 
-/*
- * TESTING BEGIN
- */
+// Method to Load Streaming camera to UIView
 
 -(void)viewWillAppear:(BOOL)animated{
     session = [[AVCaptureSession alloc] init];
@@ -79,8 +75,11 @@
     
 }
 
+
+// Method Action Button one shoot camera
+
 - (IBAction)takePhoto:(id)sender {
-    
+    //NSInteger NbElementsArray = _ProspectImage.count;
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections) {
         for (AVCaptureInputPort *port in [connection inputPorts]) {
@@ -101,6 +100,11 @@
         }
     }];
 }
+
+/*
+ * Test Method
+ */
+
 /*
 - (IBAction)selectPhoto:(UIButton *)sender {
     
@@ -121,27 +125,6 @@
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
--(void)getCamera{
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
-    picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
-    picker.showsCameraControls = YES;
-    picker.navigationBarHidden = NO;
-    picker.toolbarHidden = YES;
-    [picker takePicture];
-    
-    // Insert the overlay
-    //self.overlay = [[o alloc] initWithNibName:@"Overlay" bundle:nil];
-    //overlay.pickerReference = picker;
-    //picker.cameraOverlayView = overlay.view;
-    //picker.delegate = overlay;
-    
-    [self presentModalViewController:picker animated:YES];
-    
-}
- */
 /*
  * TESTING END
  */
