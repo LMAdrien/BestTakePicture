@@ -12,7 +12,7 @@
 // View NS LOG DEBUG
 static BOOL ERRORNSLOG = true;
 
-@interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *ViewPicture;
 @property (weak, nonatomic) IBOutlet UIImageView *ViewCamera;
@@ -22,8 +22,17 @@ static BOOL ERRORNSLOG = true;
 @property(nonatomic, retain) MakerPicture *makerPicture;
 @property (weak, nonatomic) IBOutlet UILabel *NumberShoot;
 
-- (IBAction)ActionShot:(id)sender;
 
-- (IBAction)ActionNextColumn:(id)sender;
+@property (strong, nonatomic) IBOutlet UIView *FrameForCapture;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+
+
+
+- (IBAction)takePhoto:(id)sender;
+//- (IBAction)ActionSelect:(UIButton *)sender;
+//- (IBAction)ActionShot:(UIButton *)sender;
+//- (IBAction)ActionNextColumn:(id)sender;
+
+
 @end
 
