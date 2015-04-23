@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MakerPicture.h"
 
 // View NS LOG DEBUG
 static BOOL ERRORNSLOG = true;
@@ -18,8 +19,10 @@ static BOOL ERRORNSLOG = true;
 @property(nonatomic, retain) UIImage *image;
 @property(nonatomic, retain) UIImage *outImage;
 @property(nonatomic, retain) NSMutableArray *ProspectImage;
+@property(nonatomic, retain) MakerPicture *makerPicture;
 
 - (IBAction)ActionShot:(id)sender;
 
+- (IBAction)ActionNextColumn:(id)sender;
 @end
 

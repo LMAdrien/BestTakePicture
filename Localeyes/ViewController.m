@@ -15,9 +15,9 @@
 @implementation ViewController
 
 
-/*
- *  Initialize object
- */
+
+// Initialize object
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _image = [[UIImage alloc]init];
@@ -29,11 +29,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-/*
- *  Action button shot camera
- */
+    }
+
+//  Action button shot camera
+
 - (IBAction)ActionShot:(id)sender {
     NSInteger NbElementsArray = _ProspectImage.count;
     _ViewCamera.image = _ViewPicture.image;
@@ -44,5 +43,11 @@
             NSLog(@"%@", [_ProspectImage[i] description]);
         }
     }
+}
+
+//  Action button to next column in department store
+
+- (IBAction)ActionNextColumn:(id)sender {
+    
 }
 @end

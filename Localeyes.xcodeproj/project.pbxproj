@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F76694661AE8F9D000902950 /* MakerPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = F76694651AE8F9D000902950 /* MakerPicture.m */; };
 		F7D038B11AE6A186007B779D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038B01AE6A186007B779D /* main.m */; };
 		F7D038B41AE6A186007B779D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038B31AE6A186007B779D /* AppDelegate.m */; };
 		F7D038B71AE6A186007B779D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038B61AE6A186007B779D /* ViewController.m */; };
@@ -18,7 +19,6 @@
 		F7D038D71AE6A3BF007B779D /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D038D61AE6A3BF007B779D /* PhotosUI.framework */; };
 		F7D038D91AE6A42C007B779D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D038D81AE6A42C007B779D /* AVFoundation.framework */; };
 		F7D038DB1AE6A437007B779D /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D038DA1AE6A437007B779D /* AVKit.framework */; };
-		F7D038DE1AE6A5D7007B779D /* TakePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038DD1AE6A5D7007B779D /* TakePhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F76694641AE8F9D000902950 /* MakerPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakerPicture.h; sourceTree = "<group>"; };
+		F76694651AE8F9D000902950 /* MakerPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakerPicture.m; sourceTree = "<group>"; };
 		F7D038AB1AE6A186007B779D /* Localeyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localeyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D038AF1AE6A186007B779D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7D038B01AE6A186007B779D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,8 +51,6 @@
 		F7D038D61AE6A3BF007B779D /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		F7D038D81AE6A42C007B779D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F7D038DA1AE6A437007B779D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		F7D038DC1AE6A5D7007B779D /* TakePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhoto.h; sourceTree = "<group>"; };
-		F7D038DD1AE6A5D7007B779D /* TakePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhoto.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,6 @@
 		F7D038A21AE6A186007B779D = {
 			isa = PBXGroup;
 			children = (
-				F7D038DC1AE6A5D7007B779D /* TakePhoto.h */,
-				F7D038DD1AE6A5D7007B779D /* TakePhoto.m */,
 				F7D038DA1AE6A437007B779D /* AVKit.framework */,
 				F7D038D81AE6A42C007B779D /* AVFoundation.framework */,
 				F7D038D61AE6A3BF007B779D /* PhotosUI.framework */,
@@ -110,6 +108,8 @@
 				F7D038BB1AE6A186007B779D /* Images.xcassets */,
 				F7D038BD1AE6A186007B779D /* LaunchScreen.xib */,
 				F7D038AE1AE6A186007B779D /* Supporting Files */,
+				F76694641AE8F9D000902950 /* MakerPicture.h */,
+				F76694651AE8F9D000902950 /* MakerPicture.m */,
 			);
 			path = Localeyes;
 			sourceTree = "<group>";
@@ -241,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7D038B71AE6A186007B779D /* ViewController.m in Sources */,
-				F7D038DE1AE6A5D7007B779D /* TakePhoto.m in Sources */,
+				F76694661AE8F9D000902950 /* MakerPicture.m in Sources */,
 				F7D038B41AE6A186007B779D /* AppDelegate.m in Sources */,
 				F7D038B11AE6A186007B779D /* main.m in Sources */,
 			);
