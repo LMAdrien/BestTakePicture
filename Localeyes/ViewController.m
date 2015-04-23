@@ -37,6 +37,7 @@
     NSInteger NbElementsArray = _ProspectImage.count;
     _ViewCamera.image = _ViewPicture.image;
    [_ProspectImage insertObject:_ViewPicture.image atIndex:NbElementsArray];
+    [_NumberShoot setText:[NSString stringWithFormat: @"%li",_ProspectImage.count]];
     if(ERRORNSLOG == true)
     {
         for (NSInteger i = 0; i < _ProspectImage.count; i++) {

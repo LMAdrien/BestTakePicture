@@ -20,6 +20,7 @@ static BOOL ERRORNSLOG = true;
 @property(nonatomic, retain) UIImage *outImage;
 @property(nonatomic, retain) NSMutableArray *ProspectImage;
 @property(nonatomic, retain) MakerPicture *makerPicture;
+@property (weak, nonatomic) IBOutlet UILabel *NumberShoot;
 
 - (IBAction)ActionShot:(id)sender;
 
