@@ -23,6 +23,7 @@ static BOOL ERRORNSLOG = true;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)takePhoto:(id)sender;
+- (IBAction)NewColumn:(id)sender;
 
 @end
 

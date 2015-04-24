@@ -100,6 +100,7 @@
             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
             UIImage *image = [UIImage imageWithData:imageData];
              [_ProspectImage insertObject:image atIndex:[_ProspectImage count]];
+            //[_ProspectImage][0] = [[NSArray alloc] initWithArray:_ProspectImage];
              [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
                        self.imageView.image = image;
         }
@@ -112,5 +113,8 @@
         }
     }
 
+}
+
+- (IBAction)NewColumn:(id)sender {
 }
 @end
