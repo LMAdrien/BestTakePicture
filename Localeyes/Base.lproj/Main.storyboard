@@ -66,11 +66,30 @@
                         <outlet property="FrameForCapture" destination="Hsj-m5-hSg" id="X3V-pm-rDj"/>
                         <outlet property="NumberShoot" destination="p8O-lw-6Ih" id="cJJ-xA-cuK"/>
                         <outlet property="imageView" destination="BaC-wd-oq4" id="iuZ-Og-rAF"/>
+                        <segue destination="r1N-Qh-P4t" kind="custom" identifier="ViewProspect" id="LbM-ad-3sV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154" y="619"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tUK-59-C8O">
+            <objects>
+                <viewController id="r1N-Qh-P4t" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iTG-Cp-aVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJw-ga-SCq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4h4-Gn-8by">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldl-eX-Y8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="634"/>
         </scene>
     </scenes>
     <resources>
