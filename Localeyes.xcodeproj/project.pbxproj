@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A687EC51AEA8F99001023AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A687EC41AEA8F99001023AD /* CoreMotion.framework */; };
 		F76694661AE8F9D000902950 /* MakerPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = F76694651AE8F9D000902950 /* MakerPicture.m */; };
 		F7D038B11AE6A186007B779D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038B01AE6A186007B779D /* main.m */; };
 		F7D038B41AE6A186007B779D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038B31AE6A186007B779D /* AppDelegate.m */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A687EC41AEA8F99001023AD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		F76694641AE8F9D000902950 /* MakerPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakerPicture.h; sourceTree = "<group>"; };
 		F76694651AE8F9D000902950 /* MakerPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakerPicture.m; sourceTree = "<group>"; };
 		F7D038AB1AE6A186007B779D /* Localeyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localeyes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A687EC51AEA8F99001023AD /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 		F7D038A21AE6A186007B779D = {
 			isa = PBXGroup;
 			children = (
+				1A687EC41AEA8F99001023AD /* CoreMotion.framework */,
 				F7D038DA1AE6A437007B779D /* AVKit.framework */,
 				F7D038D81AE6A42C007B779D /* AVFoundation.framework */,
 				F7D038D61AE6A3BF007B779D /* PhotosUI.framework */,

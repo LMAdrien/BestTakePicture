@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
+
 @interface ViewController ()
 
 @end
@@ -17,12 +18,15 @@
 
     AVCaptureSession *session;
     AVCaptureStillImageOutput *stillImageOutput;
+    CMMotionManager *motionManager;
+
 
 // Initialize object
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     _outImage = [[UIImage alloc] init];
+    
     _ProspectImage = [[NSMutableArray alloc] init];
     
     // Do any additional setup after loading the view, typically from a nib.
@@ -110,4 +114,7 @@
     }
 
 }
+//
+
+
 @end

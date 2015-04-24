@@ -16,4 +16,12 @@
 
 
 
+
+
+
+-(void)dittoto{
+    NSLog(@"toto");
+
+}
+
 @end
