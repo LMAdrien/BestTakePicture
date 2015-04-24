@@ -23,7 +23,22 @@
     [super viewDidLoad];
     _outImage = [[UIImage alloc] init];
     _ProspectImage = [[NSMutableArray alloc] init];
-
+    _image = [UIImage imageNamed:@"etna"];
+    _ViewPicture.image = _image;
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
