@@ -24,8 +24,6 @@
     [super viewDidLoad];
     _outImage = [[UIImage alloc] init];
     _ProspectImage = [[NSMutableArray alloc] init];
-    _image = [UIImage imageNamed:@"etna"];
-    _ViewPicture.image = _image;
     
     // Do any additional setup after loading the view, typically from a nib.
     
