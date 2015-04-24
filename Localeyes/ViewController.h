@@ -22,13 +22,7 @@ static BOOL ERRORNSLOG = true;
 @property (strong, nonatomic) IBOutlet UIView *FrameForCapture;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
-
-
 - (IBAction)takePhoto:(id)sender;
-//- (IBAction)ActionSelect:(UIButton *)sender;
-//- (IBAction)ActionShot:(UIButton *)sender;
-//- (IBAction)ActionNextColumn:(id)sender;
-
 
 @end
 

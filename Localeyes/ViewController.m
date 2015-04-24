@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     _outImage = [[UIImage alloc] init];
     _ProspectImage = [[NSMutableArray alloc] init];
     
@@ -36,6 +37,7 @@
                                                     otherButtonTitles: nil];
         
         [myAlertView show];
+        
         
     }
 }
@@ -80,6 +82,7 @@
 // Method Action Button one shoot camera
 
 - (IBAction)takePhoto:(id)sender {
+   // [self performSegueWithIdentifier:@"ViewProspect" sender:self];
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections) {
         for (AVCaptureInputPort *port in [connection inputPorts]) {

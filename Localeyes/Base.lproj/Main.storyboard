@@ -12,43 +12,18 @@
                         <viewControllerLayoutGuide type="top" id="pd1-oI-bAa"/>
                         <viewControllerLayoutGuide type="bottom" id="FZO-2d-d9o"/>
                     </layoutGuides>
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f69-2x-595">
-                                <rect key="frame" x="335" y="959" width="96" height="51"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Shot">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ActionShot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7V-RT-WHc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USb-ea-qfE">
-                                <rect key="frame" x="495" y="970" width="32" height="30"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ActionNextColumn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zs-c1-WuK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45D-hG-hUW">
-                                <rect key="frame" x="239" y="970" width="54" height="30"/>
-                                <state key="normal" title="Preview">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsj-m5-hSg">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfG-bJ-hL0" userLabel="shooterButton">
-                                        <rect key="frame" x="669" y="506" width="99" height="89"/>
-                                        <connections>
-                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iH4-8O-9G0"/>
-                                        </connections>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45D-hG-hUW">
+                                        <rect key="frame" x="687" y="885" width="54" height="30"/>
+                                        <state key="normal" title="Preview">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
                                     <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagram12" translatesAutoresizingMaskIntoConstraints="NO" id="HLt-mc-qs2">
                                         <rect key="frame" x="21" y="32" width="34" height="34"/>
@@ -62,11 +37,24 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USb-ea-qfE">
+                                        <rect key="frame" x="16" y="885" width="104" height="30"/>
+                                        <state key="normal" title="New Column">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ActionNextColumn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zs-c1-WuK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfG-bJ-hL0" userLabel="shooterButton">
+                                        <rect key="frame" x="664" y="461" width="100" height="101"/>
+                                        <state key="normal" image="shooterFull"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iH4-8O-9G0"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BaC-wd-oq4">
-                                        <rect key="frame" x="0.0" y="995" width="768" height="456"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shooterFull" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-Xt-u5J">
-                                        <rect key="frame" x="669" y="506" width="91" height="89"/>
+                                        <rect key="frame" x="0.0" y="997" width="768" height="456"/>
                                     </imageView>
                                 </subviews>
                             </view>
@@ -78,11 +66,30 @@
                         <outlet property="FrameForCapture" destination="Hsj-m5-hSg" id="X3V-pm-rDj"/>
                         <outlet property="NumberShoot" destination="p8O-lw-6Ih" id="cJJ-xA-cuK"/>
                         <outlet property="imageView" destination="BaC-wd-oq4" id="iuZ-Og-rAF"/>
+                        <segue destination="r1N-Qh-P4t" kind="custom" identifier="ViewProspect" id="LbM-ad-3sV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154" y="619"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tUK-59-C8O">
+            <objects>
+                <viewController id="r1N-Qh-P4t" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iTG-Cp-aVV"/>
+                        <viewControllerLayoutGuide type="bottom" id="VJw-ga-SCq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4h4-Gn-8by">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldl-eX-Y8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1285" y="634"/>
         </scene>
     </scenes>
     <resources>
