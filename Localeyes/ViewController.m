@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
+
 @interface ViewController ()
 
 @end
@@ -23,8 +24,6 @@
     [super viewDidLoad];
     _outImage = [[UIImage alloc] init];
     _ProspectImage = [[NSMutableArray alloc] init];
-    _image = [UIImage imageNamed:@"etna"];
-    _ViewPicture.image = _image;
     
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -43,31 +42,19 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    }
+}
 
-//  Action button shot camera => to Refactoring
-/*
-- (IBAction)ActionShot:(id)sender {
-    NSInteger NbElementsArray = _ProspectImage.count;
-    _ViewCamera.image = _ViewPicture.image;
-   [_ProspectImage insertObject:_ViewPicture.image atIndex:NbElementsArray];
-    [_NumberShoot setText:[NSString stringWithFormat: @"%li",_ProspectImage.count]];
-    if(ERRORNSLOG == true)
-    {
-        for (NSInteger i = 0; i < _ProspectImage.count; i++) {
-            NSLog(@"%@", [_ProspectImage[i] description]);
-        }
-    }
+// Auto lock orientation
+
+-(NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
-//  Action button to next column in department store
-- (IBAction)ActionNextColumn:(id)sender {
-    [self getCamera];
-}
-*/
 
 // Method to Load Streaming camera to UIView
 
 -(void)viewWillAppear:(BOOL)animated{
+    [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
     session = [[AVCaptureSession alloc] init];
     [session setSessionPreset:AVCaptureSessionPresetPhoto];
     AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -76,7 +63,7 @@
     if ([session canAddInput:deviceInput])
         [session addInput:deviceInput];
     AVCaptureVideoPreviewLayer *previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
-    [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
+    [previewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     CALayer *rootLayer = [[self view] layer];
     [rootLayer setMasksToBounds:YES];
     CGRect frame = self.FrameForCapture.frame;
@@ -90,11 +77,9 @@
     
 }
 
-
 // Method Action Button one shoot camera
 
 - (IBAction)takePhoto:(id)sender {
-    //NSInteger NbElementsArray = _ProspectImage.count;
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections) {
         for (AVCaptureInputPort *port in [connection inputPorts]) {
@@ -111,37 +96,18 @@
         if (imageDataSampleBuffer != NULL) {
             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
             UIImage *image = [UIImage imageWithData:imageData];
-            self.imageView.image = image;
+             [_ProspectImage insertObject:image atIndex:[_ProspectImage count]];
+             [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
+                       self.imageView.image = image;
         }
     }];
+    if(ERRORNSLOG == true)
+    {
+        for (NSInteger i = 0; i < _ProspectImage.count; i++) {
+            NSLog(@"%@", [_ProspectImage[i] description]);
+            NSLog(@"%lu", (unsigned long)_ProspectImage.count);
+        }
+    }
+
 }
-
-/*
- * Test Method
- */
-
-/*
-- (IBAction)selectPhoto:(UIButton *)sender {
-    
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-}
-
--(void)takePhotoOld{
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerCameraCaptureModePhoto;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-}
-
-/*
- * TESTING END
- */
-
 @end
