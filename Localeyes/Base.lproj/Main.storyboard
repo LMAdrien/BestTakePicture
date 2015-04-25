@@ -29,7 +29,7 @@
                                     <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photos" translatesAutoresizingMaskIntoConstraints="NO" id="HLt-mc-qs2">
                                         <rect key="frame" x="714" y="41" width="34" height="34"/>
                                     </imageView>
-                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="column" translatesAutoresizingMaskIntoConstraints="NO" id="nxw-4Y-f34">
+                                    <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gallery" translatesAutoresizingMaskIntoConstraints="NO" id="nxw-4Y-f34">
                                         <rect key="frame" x="714" y="90" width="34" height="34"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shoot" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8O-lw-6Ih">
@@ -50,7 +50,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfG-bJ-hL0" userLabel="shooterButton">
                                         <rect key="frame" x="652" y="466" width="100" height="101"/>
-                                        <state key="normal" image="shoot"/>
+                                        <state key="normal" image="shooter"/>
                                         <connections>
                                             <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iH4-8O-9G0"/>
                                         </connections>
@@ -74,7 +74,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="d49-ks-Tjm">
                                         <rect key="frame" x="127" y="943" width="34" height="34"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewFocus" translatesAutoresizingMaskIntoConstraints="NO" id="lse-2d-2ps">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="focus" translatesAutoresizingMaskIntoConstraints="NO" id="lse-2d-2ps">
                                         <rect key="frame" x="209" y="389" width="350" height="256"/>
                                     </imageView>
                                 </subviews>
@@ -115,12 +115,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NewFocus" width="350" height="256"/>
         <image name="add" width="64" height="64"/>
-        <image name="column" width="64" height="64"/>
+        <image name="focus" width="350" height="256"/>
+        <image name="gallery" width="64" height="64"/>
         <image name="photos" width="64" height="64"/>
         <image name="preview" width="64" height="64"/>
-        <image name="shoot" width="128" height="128"/>
+        <image name="shooter" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
