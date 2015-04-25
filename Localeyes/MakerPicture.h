@@ -11,8 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MakerPicture : UIImage
--(id)init;
+@interface MakerPicture : NSObject
+
 @property (nonatomic, retain) NSMutableArray *departmentStore;
 
 @end
