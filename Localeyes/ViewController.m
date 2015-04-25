@@ -120,15 +120,13 @@
 
 - (IBAction)NewColumn:(id)sender {
     _ProspectImage[numberColumn] = [[NSMutableArray alloc] initWithArray:_ColumnImage];
-    
     [_ColumnImage removeAllObjects];
+    if(ERRORNSLOG == true){
     NSLog(@"%@", _ProspectImage);
-  
+    }
     [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ColumnImage count]]];
-
-
     numberColumn++;
-     [_NumberColumn setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage 
-    
+    [_NumberColumn setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
+                    
 }
 @end

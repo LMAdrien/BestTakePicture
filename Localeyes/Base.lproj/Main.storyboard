@@ -76,6 +76,7 @@
                         <outlet property="NumberColumn" destination="Fn3-vL-eCc" id="u5c-xm-Wlj"/>
                         <outlet property="NumberShoot" destination="p8O-lw-6Ih" id="cJJ-xA-cuK"/>
                         <outlet property="imageView" destination="BaC-wd-oq4" id="iuZ-Og-rAF"/>
+                        <outlet property="imageViewColumn" destination="qpJ-VY-Cve" id="xNl-Ak-0H5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

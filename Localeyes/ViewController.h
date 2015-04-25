@@ -23,6 +23,8 @@ static BOOL ERRORNSLOG = true;
 
 @property (strong, nonatomic) IBOutlet UIView *FrameForCapture;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewColumn;
+
 
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)NewColumn:(id)sender;
