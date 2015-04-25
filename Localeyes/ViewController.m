@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
+#define degrees(x) (180 * x / M_PI)
+
 
 @interface ViewController ()
-@synthesize motionManager;
 @end
 
 
@@ -114,7 +115,66 @@
     }
 
 }
-//
+// gryo
 
+- (IBAction)toggleGyro:(UIButton*)sender
+{
+    
+    if ([[sender titleForState:UIControlStateNormal] isEqualToString:@"Stop"])
+        {
+            [self stopGyro];
+            [sender setTitle:@"Start" forState:UIControlStateNormal];
+        }
+    
+    else
+        {
+            [self startGyro];
+            [sender setTitle:@"Stop" forState:UIControlStateNormal];
+        }
+}
+
+
+- (void)startGyro
+{
+    
+    if (motionManager)
+    {
+        [self stopGyro];
+    }
+    
+    motionManager = [[CMMotionManager alloc] init];
+    motionManager.gyroUpdateInterval = 0.01;
+    motionManager.deviceMotionUpdateInterval = 0.01;
+    
+    if ([motionManager isGyroAvailable]) {
+        [motionManager startGyroUpdatesToQueue:[NSOperationQueue mainQueue]
+                                   withHandler:^(CMGyroData *gyroData, NSError *error) {
+                                       _labelCounterX.text = [NSString stringWithFormat:@"%.3f",
+                                                              gyroData.rotationRate.x];
+                                       _labelCounterY.text = [NSString stringWithFormat:@"%.3f",
+                                                              gyroData.rotationRate.y];
+                                       _labelCounterZ.text = [NSString stringWithFormat:@"%.3f",
+                                                              gyroData.rotationRate.z];
+                                   }];
+        [motionManager startDeviceMotionUpdatesToQueue:
+         [NSOperationQueue mainQueue]
+                                           withHandler:^(CMDeviceMotion *motion, NSError *error) {
+                                               CMAttitude *attitude = motion.attitude;
+                                               _labelYawDegrees.text = [NSString stringWithFormat:@"%.3f",
+                                                                        degrees(attitude.yaw)];
+                                               _labelPitchDegrees.text = [NSString stringWithFormat:@"%.3f",
+                                                                          degrees(attitude.pitch)];
+                                               _labelRollDegrees.text = [NSString stringWithFormat:@"%.3f",
+                                                                         degrees(attitude.roll)];
+                                           }];
+    }
+}
+
+- (void)stopGyro {
+    
+    [motionManager stopGyroUpdates];
+    [motionManager stopDeviceMotionUpdates];
+    motionManager = nil;
+}
 
 @end

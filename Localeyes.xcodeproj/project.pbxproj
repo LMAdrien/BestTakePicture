@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A687EC51AEA8F99001023AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A687EC41AEA8F99001023AD /* CoreMotion.framework */; };
+		1A687EC51AEA8F99001023AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A687EC41AEA8F99001023AD /* CoreMotion.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F76694661AE8F9D000902950 /* MakerPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = F76694651AE8F9D000902950 /* MakerPicture.m */; };
 		F7D038B11AE6A186007B779D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038B01AE6A186007B779D /* main.m */; };
 		F7D038B41AE6A186007B779D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D038B31AE6A186007B779D /* AppDelegate.m */; };

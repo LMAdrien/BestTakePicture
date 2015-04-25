@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import "MakerPicture.h"
-#define kAccelerationThreshold 1.7
-#define kUpdateInterval (1.0f/10.0f)
 
 // View NS LOG DEBUG
 static BOOL ERRORNSLOG = true;
@@ -24,14 +22,16 @@ static BOOL ERRORNSLOG = true;
 @property(nonatomic, retain) NSMutableArray *ProspectImage;
 @property(nonatomic, retain) MakerPicture *makerPicture;
 @property (weak, nonatomic) IBOutlet UILabel *NumberShoot;
-@property (retain,nonatomic) CMMotionManager *motionManager;
 @property (strong, nonatomic) IBOutlet UIView *FrameForCapture;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UILabel *labelCounterX;
+@property (strong, nonatomic) IBOutlet UILabel *labelCounterY;
+@property (strong, nonatomic) IBOutlet UILabel *labelCounterZ;
 
+@property (strong, nonatomic) IBOutlet UILabel *labelYawDegrees;
+@property (strong, nonatomic) IBOutlet UILabel *labelPitchDegrees;
+@property (strong, nonatomic) IBOutlet UILabel *labelRollDegrees;
 
+- (IBAction)toggleGyro:(id)sender;
 - (IBAction)takePhoto:(id)sender;
 @end
-
-
-
-
