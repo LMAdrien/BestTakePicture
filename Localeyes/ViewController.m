@@ -21,6 +21,7 @@
     AVCaptureSession *session;
     AVCaptureStillImageOutput *stillImageOutput;
     CMMotionManager *motionManager;
+    int numberColumn = 0;
 
 
 // Initialize object
@@ -184,5 +185,19 @@
     [motionManager stopDeviceMotionUpdates];
     motionManager = nil;
 }
-
+- (IBAction)NewColumn:(id)sender {
+    _imageView.hidden = true;
+    _imageViewColumn.hidden = false;
+    _ProspectImage[numberColumn] = [[NSMutableArray alloc] initWithArray:_ColumnImage];
+    [_ColumnImage removeAllObjects];
+    if(ERRORNSLOG == true){
+        NSLog(@"%@", _ProspectImage);
+    }
+    [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ColumnImage count]]];
+    numberColumn++;
+    [_NumberColumn setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
+    _imageViewColumn.image = _ProspectImage[numberColumn - 1][0];
+    _imageViewColumn.alpha = 0.55;
+    NSLog(@"%@", _imageViewColumn);
+}
 @end
