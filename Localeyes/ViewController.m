@@ -84,6 +84,8 @@
 // Method Action Button one shoot camera
 
 - (IBAction)takePhoto:(id)sender {
+    _imageView.hidden = false;
+    _imageViewColumn.hidden = true;
    // [self performSegueWithIdentifier:@"ViewProspect" sender:self];
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections) {
@@ -119,6 +121,8 @@
 }
 
 - (IBAction)NewColumn:(id)sender {
+    _imageView.hidden = true;
+    _imageViewColumn.hidden = false;
     _ProspectImage[numberColumn] = [[NSMutableArray alloc] initWithArray:_ColumnImage];
     [_ColumnImage removeAllObjects];
     if(ERRORNSLOG == true){
@@ -127,6 +131,8 @@
     [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ColumnImage count]]];
     numberColumn++;
     [_NumberColumn setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
-                    
+    _imageViewColumn.image = _ProspectImage[numberColumn - 1][0];
+    _imageViewColumn.alpha = 0.55;
+        NSLog(@"%@", _imageViewColumn);
 }
 @end
