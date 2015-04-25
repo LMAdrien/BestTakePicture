@@ -11,8 +11,9 @@
 
 
 @interface ViewController ()
-
+@synthesize motionManager;
 @end
+
 
 @implementation ViewController
 
@@ -28,7 +29,6 @@
     _outImage = [[UIImage alloc] init];
     
     _ProspectImage = [[NSMutableArray alloc] init];
-    
     // Do any additional setup after loading the view, typically from a nib.
     
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
