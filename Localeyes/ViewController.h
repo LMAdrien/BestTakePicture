@@ -16,8 +16,10 @@ static BOOL ERRORNSLOG = true;
 
 @property(nonatomic, retain) UIImage *outImage;
 @property(nonatomic, retain) NSMutableArray *ProspectImage;
+@property(nonatomic, retain) NSMutableArray *ColumnImage;
 @property(nonatomic, retain) MakerPicture *makerPicture;
 @property (weak, nonatomic) IBOutlet UILabel *NumberShoot;
+@property (strong, nonatomic) IBOutlet UILabel *NumberColumn;
 
 @property (strong, nonatomic) IBOutlet UIView *FrameForCapture;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;

@@ -12,8 +12,10 @@
 #import "MakerPicture.h"
 
 @implementation MakerPicture
+
 @synthesize departmentStore;
 
 
 
 @end
+

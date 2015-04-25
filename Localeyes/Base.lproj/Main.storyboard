@@ -19,6 +19,12 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hsj-m5-hSg">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45D-hG-hUW">
+                                        <rect key="frame" x="687" y="959" width="54" height="30"/>
+                                        <state key="normal" title="Preview">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instagram12" translatesAutoresizingMaskIntoConstraints="NO" id="HLt-mc-qs2">
                                         <rect key="frame" x="726" y="36" width="34" height="34"/>
                                     </imageView>
@@ -37,8 +43,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="ActionNextColumn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0zs-c1-WuK"/>
-                                            <action selector="NewColumn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v97-N0-Pji"/>
+                                            <action selector="NewColumn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rNk-9R-5uL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfG-bJ-hL0" userLabel="shooterButton">
@@ -54,12 +59,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpJ-VY-Cve">
                                         <rect key="frame" x="-67" y="0.0" width="123" height="1024"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45D-hG-hUW">
-                                        <rect key="frame" x="687" y="959" width="54" height="30"/>
-                                        <state key="normal" title="Preview">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Column" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn3-vL-eCc">
+                                        <rect key="frame" x="594" y="91" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </view>
                         </subviews>
@@ -68,9 +73,9 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="FrameForCapture" destination="Hsj-m5-hSg" id="X3V-pm-rDj"/>
+                        <outlet property="NumberColumn" destination="Fn3-vL-eCc" id="u5c-xm-Wlj"/>
                         <outlet property="NumberShoot" destination="p8O-lw-6Ih" id="cJJ-xA-cuK"/>
                         <outlet property="imageView" destination="BaC-wd-oq4" id="iuZ-Og-rAF"/>
-                        <segue destination="r1N-Qh-P4t" kind="custom" identifier="ViewProspect" id="LbM-ad-3sV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

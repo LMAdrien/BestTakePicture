@@ -17,12 +17,14 @@
 
     AVCaptureSession *session;
     AVCaptureStillImageOutput *stillImageOutput;
+    int numberColumn = 0;
 
 // Initialize object
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _ColumnImage = [[NSMutableArray alloc]init];
+    _makerPicture = [[MakerPicture alloc] init];
     _outImage = [[UIImage alloc] init];
     _ProspectImage = [[NSMutableArray alloc] init];
     
@@ -53,7 +55,7 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
-// Method to Load Streaming camera to UIView
+// Method to Load Streaming camera in UIView
 
 -(void)viewWillAppear:(BOOL)animated{
     [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
@@ -99,9 +101,10 @@
         if (imageDataSampleBuffer != NULL) {
             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
             UIImage *image = [UIImage imageWithData:imageData];
-             [_ProspectImage insertObject:image atIndex:[_ProspectImage count]];
-            //[_ProspectImage][0] = [[NSArray alloc] initWithArray:_ProspectImage];
-             [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage count]]];
+            [_ColumnImage addObject:image];
+                 //Update Label Text
+            
+              [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ColumnImage count]]];
                        self.imageView.image = image;
         }
     }];
@@ -116,5 +119,16 @@
 }
 
 - (IBAction)NewColumn:(id)sender {
+    _ProspectImage[numberColumn] = [[NSMutableArray alloc] initWithArray:_ColumnImage];
+    
+    [_ColumnImage removeAllObjects];
+    NSLog(@"%@", _ProspectImage);
+  
+    [_NumberShoot setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ColumnImage count]]];
+
+
+    numberColumn++;
+     [_NumberColumn setText:[NSString stringWithFormat: @"%li",(unsigned long)[_ProspectImage 
+    
 }
 @end
