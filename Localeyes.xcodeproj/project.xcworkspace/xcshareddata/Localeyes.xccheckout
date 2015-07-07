@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C9181FC2-0C15-47CE-89FB-462764CDD628</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Localeyes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2185239453B156A7D6B350CF8792C2129EBE7D02</key>
+		<string>https://bitbucket.org/prepetna/cc-ios-localeyes.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Localeyes.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2185239453B156A7D6B350CF8792C2129EBE7D02</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/prepetna/cc-ios-localeyes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2185239453B156A7D6B350CF8792C2129EBE7D02</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2185239453B156A7D6B350CF8792C2129EBE7D02</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cc-ios-localeyes</string>
+		</dict>
+	</array>
+</dict>
+</plist>
